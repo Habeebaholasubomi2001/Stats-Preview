@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        font-family: "inter", sans-serif;
+        flex-grow: 1;
+        justify-content: center;
+        background-color: hsl(233, 47%, 7%);
+      }
+      .container {
+        width: 720px;
+        margin: 100px;
+        color: white;
+        /* padding: 20px; */
+        display: grid;
+        overflow: hidden;
+        gap: 30px;
+        border-radius: 5px;
+        grid-template-columns: 1fr 1fr;
+        background-color: hsl(244, 38%, 16%);
+      }
+      h1 span {
+        color: hsl(277, 64%, 61%);
+      }
+      .box-1 {
+        align-items: center;
+        padding: 30px;
+        font-size: small;
+      }
+      .box-1 h1 {
+        margin-bottom: 15px;
+      }
+      .box-1 p {
+        line-height: 1.6;
+        margin-bottom: 40px;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+      .flex-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .f {
+        font-size: 20px;
+      }
+      .g {
+        color: hsl(0, 0%, 100%);
+        letter-spacing: 1.5px;
+        font-size: 10px;
+      }
+      /* .box-2 img {
+        border-radius: 0 5px 5px 0;
+        background-image: linear-gradient(hsl(277, 64%, 61%));
+        width: 100%;
+        object-fit: fill;
+        /* align-self: center; */
+      /* } */
+      .box-2 {
+        background-image: linear-gradient(
+            to right,
+            hsla(277, 62%, 44%, 0.35),
+            hsla(277, 76%, 32%, 0.35)
+          ),
+          url("/images/image-header-desktop.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      @media (max-width: 375px) {
+        .box-2 {
+          background-image: linear-gradient(
+              to right,
+              hsla(277, 62%, 44%, 0.35),
+              hsla(277, 76%, 32%, 0.35)
+            ),
+            url("/images/image-header-mobile.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+        .container {
+          width: 300px;
+          display: grid;
+          text-align: center;
+          font-size: medium;
+          grid-template-columns: 1fr;
+        }
+        .box-1 {
+          padding-top: 0;
+          padding-right: 10px;
+          padding-left: 10px;
+          font-size: small;
+        }
+        .box-1 h1 {
+          font-size: 15px;
+          margin-top: 0;
+          color: hsla(0, 0%, 100%, 0.75);
+        }
+        .box-1 p {
+          font-size: 10px;
+          line-height: 1.6;
+          letter-spacing: 0.8px;
+          margin-bottom: 20px;
+          color: hsla(0, 0%, 100%, 0.75);
+        }
+        .box-2 {
+          height: 150px;
+          grid-row: 1;
+        }
+        .flex-box {
+          gap: 15px;
+          font-size: smaller;
+          flex-direction: column;
+        }
+        .f {
+          font-size: 15px;
+        }
+        .g {
+          font-size: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-1">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="flex-box">
+          <div class="flex-1">
+            <span class="f">10K+</span> <br />
+            <span class="g">COMPANIES</span> <br />
+          </div>
+          <div class="flex-2">
+            <span class="f">314</span> <br />
+            <span class="g">TEMPLATES</span> <br />
+          </div>
+          <div class="flex-3">
+            <span class="f">12M+</span> <br />
+            <span class="g">QUERIES</span> <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-2" role="img">
+        <!-- <img src="/images/image-header-desktop.jpg"></img> -->
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Habeebah</a>.
+    </div> -->
+  </body>
+</html>
